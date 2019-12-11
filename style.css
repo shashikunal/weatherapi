@@ -1,0 +1,33 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url('./clouds-2329680_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+}
+
+.temp {
+    font-size: 100px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #111;
+}
+
+.card {
+    background: transparent;
+    box-shadow: inset 1px 1px 39px 1px #666;
+}
+
+.icon img {
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    width: 157px;
+}
+
+.des {
+    font-size: 30px;
+
+}
