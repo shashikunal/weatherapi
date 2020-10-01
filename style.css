@@ -1,33 +1,46 @@
-body {
+*{
+    box-sizing:  border-box;
     padding: 0;
     margin: 0;
-    background: url('./clouds-2329680_960_720.jpg');
+
+}
+body{
+    background: url('../images/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100%;
     width: 100%;
+    font-family: 'Poppins',sans-serif;
     color: #fff;
 }
-
-.temp {
-    font-size: 100px;
+.paddingLeft{
+    margin-left: 500px;
+}
+#cloudTemplate{
     color: #fff;
-    text-shadow: 1px 1px 1px #111;
+}
+#search{
+    padding-left: 100px;
+    background: rgb(0 0 0 / 0%);
+    color: white;
+    border: 1px solid rgb(238 238 238 / 39%);
+}
+::placeholder{
+    color: #fff;
+}
+.adjust{
+    display: inline-block;
+    margin-top: 25px;
+    padding-top: 80px;
+    padding-left: 115px;
 }
 
-.card {
-    background: transparent;
-    box-shadow: inset 1px 1px 39px 1px #666;
+.rightShift{
+    margin-left: 1150px;
+    margin-top: -270px;
 }
-
-.icon img {
-    float: right;
-    position: absolute;
-    right: 0px;
-    top: -25px;
-    width: 157px;
-}
-
-.des {
-    font-size: 30px;
-
+.rightShift h4{
+    margin-top:5px;
 }
