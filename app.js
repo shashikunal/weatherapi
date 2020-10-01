@@ -19,22 +19,58 @@ function getWeather(getCityName) {
           console.log(weather);
           var weatherData = weather.weather;
           for (let x of weatherData) {
-            output += `
-                    <div class="col-md-4 offset-4 mt-4 card">
-                        <div class="card-body">
-                            <h1>${weather.name}</h1>
-                            <span class="icon">
-                            <img src="http://openweathermap.org/img/wn/${x.icon}.png" /></span>
-                            <p><span>temp:</span>
-                            <span class="temp">${weather.main.temp}&deg;c</span></p>
-                            <span class="des float-left">${x.description}</span>
-                            <span class="des float-right">${x.main}</span>
-                        </div>
-                    </div>
-                  `;
-            document.getElementById("template").innerHTML = output;
-          }
-        })
+           cloudOutput += `
+                <div>
+                    <img src="http://openweathermap.org/img/wn/${x.icon}@2x.png" />
+                    <h1>${x.main}</h1>
+                    <h6>${data.name}, ${data.sys.country}</h6>
+                   
+                    <h5>${x.description}</h5>
+                    <h2 class="font-weight-bold">${tempData}&deg;C </h2>
+                </div>
+
+                <div class="rightShift">
+                    <h5>Speed <h3>${data.wind.speed}</h3></h5>                   
+                    <h5>Deg <h3>${data.wind.ged}</h3></h5>                    
+                    <h5>Sunrise <h3>${data.sys.sunrise}</h3></h5>                    
+                    <h5>Sunset<h3>${data.sys.sunset}</h3></h5>                    
+                </div>
+
+              
+                
+                <div class="adjust">
+                    <h4 class="font-italic>Feels Like</h4>
+                    <h1>${feelsLike}&deg;C</h1>
+                </div>
+
+                <div class="adjust">
+                    <h4 class="font-weight-bold">Max Temp</h4>
+                    <h1>${maxTemp}&deg;C</h1>
+                </div>
+                
+                <div class="adjust">
+                    <h4 class="font-weight-bold">Min Temp</h4>
+                    <h1>${minTemp}&deg;C</h1>
+                </div>
+                
+                <div class="adjust">
+                    <h4>Pressure</h4>
+                    <h1>${data.main.pressure}</h1>
+                </div>
+
+                <div class="adjust">
+                    <h4>Humidity</h4>
+                    <h1>${data.main.humidity}</h1>
+                </div>
+
+                <div class="adjust">    
+                    <h4 class="font-italic">Time</h4>
+                    <h1>${time}</h1>              
+                </div>
+            `;
+        }
+        document.getElementById("cloudTemplate").innerHTML= cloudOutput;
+    }
         .catch(err => console.log(err));
     })
     .catch(err => console.log(err));
